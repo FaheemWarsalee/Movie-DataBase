@@ -1,0 +1,45 @@
+html
+  head
+    title Search
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+  body(onload="load()")
+    .row
+      .column
+        a(href = "/")
+          h1.MDBHeader Movie DataBase
+        a(href="/login")
+          button#login.loginSignup Login/Signup
+      #logoutSection
+          button#logout Logout
+    #navbar.row
+      a(href="/movies")
+        button Search Movies
+
+      a(href="/users")
+        button Search Users
+      
+      a(href="/people")
+        button Search People
+
+      a(href="/profile")
+        button My Profile
+    .row
+      div(id="searchbar page")
+        input#searchbox.textbox(type="text" placeholder="Search...")
+        button#go GO
+    if user.contributing
+      .row
+        h2.header Can't find a person? Add them!
+        a(href="/addperson")
+          br
+          button Add Person
+    .row
+      h1#type.header People Search Results
+      #results
+        each p in peopleList
+          .movieDiv
+            a(href="/people/" + p.name) #{p.name}
+
+    script(src="scripts/search.js")
+    script(src="/scripts/logout.js")

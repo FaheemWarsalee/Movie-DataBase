@@ -1,0 +1,27 @@
+html
+  head
+    title Add Movie
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    .row
+      h1.MDBHeader Movie DataBase
+    .row
+      h1.header Edit Movie
+    #addMovie
+      input#movieGenre.textbox(type="text" placeholder="Genres Here")
+      h2.header Directors (seperated by ',')
+      br
+      input#movieDirectors.textbox(type="text" placeholder="Directors")
+      h2.header Actors (seperated by ',')
+      br
+      input#movieActors.textbox(type="text" placeholder="Actors")
+      h2.header Writers (seperated by ',')
+      br
+      input#movieWriters.textbox(type="text" placeholder="Writers")
+      br
+      br
+      button#submitButton Submit
+
+
+    script(src="/scripts/edit_movie.js")

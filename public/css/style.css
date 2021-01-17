@@ -1,0 +1,233 @@
+body{
+  background-image: linear-gradient(to top, #434343 0%, black 100%);
+  font-family: 'Roboto', sans-serif;
+  color: #f4f4f4;
+}
+
+button{
+  font-family: 'Secular One', sans-serif;
+  color: black;
+
+  padding-right: 2%;
+  padding-left: 2%;
+
+  border-radius: 10px;
+  border:none;
+
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+}
+
+
+img{
+  margin: 10px;
+  border: 10px solid #f0a500;
+  border-radius: 8px;
+}
+
+p{
+  font-size: larger;
+  padding-left: 20px;
+}
+
+a{
+  color: #f4f4f4;
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+  font-size: larger;
+}
+
+a:hover{
+  color: #f0a500
+}
+
+table{
+  font-size: larger;
+}
+
+ul{
+  font-size: larger;
+}
+
+label{
+  font-family: "Secular One", sans-serif;
+  padding-left: 10px;
+}
+
+.MDBHeader{
+  font-family: 'Secular One', sans-serif;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding-left: 10px;
+  float: left;
+}
+
+.follow{
+  margin-top: 10px;
+}
+
+.header{
+  background-color: #fbb034;
+  background-image: linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-left: 10px;
+  font-family: 'Secular One', sans-serif;
+  color: #1a1c20;
+
+  border-radius: 8px;
+}
+
+.sub{
+  text-align: center;
+}
+
+.boxes{
+  float: left;
+  width: 33%;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.headerLink{
+  font-size: large;
+  text-decoration: none;
+}
+
+.people{
+  font-size: large;
+}
+
+.picture{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.person{
+  padding-left: 10px;
+}
+
+.textbox{
+  border-radius: 8px;
+  padding: 4px;
+  font-family: "Secular One", sans-serif;
+}
+
+.big{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+
+.poster{
+  float: right;
+  margin-bottom: 0;
+  width: 25%;
+  height: 25%;
+  object-fit: cover;
+  border: 3px solid #f0a500;
+}
+
+.info{
+  float: left;
+  margin-top: 0%;
+  margin-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.movieDiv{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.loginSignup{
+  margin-top: 15px;
+  margin-left:10px;
+  margin-bottom: 0px;
+}
+
+#searchType{
+  color: #1a1c20;
+  background-color: #fbb034;
+  background-image: linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
+  margin-left: 10px;
+  font-family: 'Secular One', sans-serif;
+  font-weight: bold;
+
+  border-radius: 8px;
+}
+
+#ratingTable{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#plot{
+  font-style: italic;
+}
+
+#releaseDate{
+  text-align: center;
+  font-family: 'Secular One', sans-serif;
+  margin-bottom: 0;
+}
+
+#avgRating{
+  padding-left: 0;
+  margin-left: 45%;
+  margin-top: 6%;
+  font-size: x-large;
+}
+
+#pfp{
+  height: auto;
+  width: auto;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+#people{
+  float: left;
+}
+
+#editMovie{
+  margin-top: 10px;
+}
+
+#logoutSection{
+  text-align: right;
+  padding-top: 8px;
+}
+
+#navbar{
+  padding-bottom: 10px;
+}
+
+#page{
+  text-align: left;
+  padding-left: 30px;
+}
+
+#searchbox{
+  text-align: center;
+  padding: 0%;
+}
+
+#userInfo{
+  padding-top: 10px;
+  padding-left: 10px;
+}

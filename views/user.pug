@@ -1,0 +1,103 @@
+html
+  head
+    title Your User Page
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    .row
+      .column
+        a(href = "/")
+          h1.MDBHeader Movie DataBase
+        a(href="/login")
+          button#login.loginSignup Login/Signup
+      #logoutSection
+          button#logout Logout
+    #navbar.row
+      a(href="/movies")
+        button Search Movies
+
+      a(href="/users")
+        button Search Users
+      
+      a(href="/people")
+        button Search People
+
+      a(href="/profile")
+        button My Profile
+    div
+      h1(class="header" id="profileName" name="user") #{user.username}
+      #userInfo
+        if user.contributing == false
+          label(for="regular") Regular
+          input#regular(name="userType" type="radio" checked="true")
+          label(for="contributing") Contributing 
+          input#contributing(name="userType" type="radio")
+        else 
+          label(for="regular") Regular
+          input#regular(name="userType" type="radio")
+          label(for="contributing") Contributing 
+          input#contributing(name="userType" type="radio" checked="false")
+    .row
+      .column
+        h2#bio.header Bio
+        p#bioText
+          | #{user.bio}
+      .column
+        .picture
+          img#pfp(src= user.pic alt="userPicture")
+    .row
+      h1.header Your Reviews
+      if user.reviews != undefined
+        each review in reviews
+            .row
+              h3.header #{review.movie_name}  [#{review.score}/10]
+              p.review #{review.review_text}
+    .row
+      h1.header Recommended Movies
+      each movie in recommended
+        .boxes
+          if movie != undefined
+            a.headerLink(href="/movies/" + movie.title)
+              h3.header.sub #{movie.title}
+            .column
+              .row
+                p.info Average Rating:
+                p #{movie.averageRating}/10
+              .row
+                p.info Directors:
+                p 
+                  each director in movie.directors 
+                    a.people(href="/people/" + director)
+                      = director + ", "
+              .row
+                p.info Actors:
+                p 
+                  each actor in movie.actors 
+                    a.people(href="/people/" + actor)
+                      = actor + ", "
+            img.poster(src= movie.poster alt="poster")
+    .row
+      #follows.column
+        h1.header Following
+        each person in user.follows
+          .person
+            label(for="")
+              if person.pType === "user"
+                a(href="/users/" +  person.name) #{person.name}
+              else
+                a(href="/people/" +  person.name) #{person.name}
+      #followers.column
+        h1.header Followers
+        each person in user.followers
+          .person
+            label(for="") 
+              a(href="/users/" +  person.name) #{person.name}
+
+    .row
+      h1.header Notifications
+      each notif in user.notifications
+        p #{notif}
+
+    script(src="/scripts/logout.js")
+    script(src="/scripts/follow.js")
+    script(src="/scripts/profile.js")

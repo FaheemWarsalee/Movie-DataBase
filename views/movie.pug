@@ -1,0 +1,125 @@
+html
+  head
+    title Movie Page
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+  body(onload="load()")
+    .row
+      .column
+        a(href = "/")
+          h1.MDBHeader Movie DataBase
+        a(href="/login")
+          button#login.loginSignup Login/Signup
+      #logoutSection
+        button#logout Logout
+    #navbar.row
+      a(href="/movies")
+        button Search Movies
+
+      a(href="/users")
+        button Search Users
+      
+      a(href="/people")
+        button Search People
+
+      a(href="/profile")
+        button My Profile
+    h1.header(id="movieName") #{movie.title}
+    .row
+      .column
+        #synopsis
+          h2.header Synopsis
+          p#plot
+            | #{movie.plot}
+      #rightColumn.column
+        .picture
+          img#poster(src= movie.poster)
+          p#releaseDate Released: #{movie.released}
+          p#releaseDate Runtime: #{movie.runtime}
+    .row
+      h2.header Genres
+      p
+        each genre in movie.genre
+          a.people(href="/movies?genre=" + genre)
+                    = genre + ", "
+    .row
+      .column
+        div
+          h2.header Cast and Crew
+        #people
+          table
+            tr
+              td Director:
+              td 
+                each director in movie.directors 
+                  a.people(href="/people/" + director)
+                    = director + ", "
+            tr
+              td Writers:
+              td
+                each writer in movie.writers 
+                  a.people(href="/people/" + writer)
+                    = writer + ", "
+            tr
+              td Actors:
+              td 
+                each actor in movie.actors 
+                  a.people(href="/people/" + actor)
+                    = actor + ", "
+          if user.contributing
+            .row
+              h2.header Add Directors/Actors/Writers (seperated by ',')
+              input#movieDirectors.textbox(type="text" placeholder="Directors")
+              br
+              br
+              input#movieActors.textbox(type="text" placeholder="Actors")
+              br
+              br
+              input#movieWriters.textbox(type="text" placeholder="Writers")
+              br
+              br
+              button#submitButton Submit
+      .column
+        #ratings
+          h2.header Average Review Ratings
+          p#avgRating #{movie.averageRating}/10
+    .row
+      h2.header Similar Movies
+      each movie in similar
+        .boxes
+          if movie != undefined
+            a.headerLink(href="/movies/" + movie.title)
+              h3.header.sub #{movie.title}
+            .column
+              .row
+                p.info Average Rating:
+                p #{movie.averageRating}/10
+              .row
+                p.info Directors:
+                p 
+                  each director in movie.directors 
+                    a.people(href="/people/" + director)
+                      = director + ", "
+              .row
+                p.info Actors:
+                p 
+                  each actor in movie.actors 
+                    a.people(href="/people/" + actor)
+                      = actor + ", "
+            img.poster(src= movie.poster alt="poster")
+    .row
+      h2.header Reviews
+      #reviewInput
+        .row
+          input#userReview.textbox.big(type="text" placeholder="Type your review here")
+          input#score.textbox(type="text" placeholder="Score 0-10")
+          button#submitReview Submit
+      #reviews
+        each review in reviews
+          .row
+            h2.header #{review.username}  [#{review.score}/10]
+            p.review #{review.review_text}
+    
+    script(src="/scripts/review.js")
+    script(src="/scripts/logout.js")
+    script(src="/scripts/edit_movie.js")

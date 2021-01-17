@@ -1,0 +1,43 @@
+html
+  head
+    title Login Page
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+  body#body(onload="init()")
+    .row
+      a(href = "/")
+        h1.MDBHeader Movie DataBase
+    #navbar.row
+      a(href="/movies")
+        button Search Movies
+
+      a(href="/users")
+        button Search Users
+      
+      a(href="/people")
+        button Search People
+
+      a(href="/profile")
+        button My Profile
+    #loginSection
+      h2#loginHeader.header Login
+      br
+      input#username.textbox(type="text" placeholder="Username")
+      br
+      br
+      input#password.textbox(type="password" placeholder="Password")
+      br
+      br
+      button#loginButton Login
+    #signUpSection
+      h2#signUpHeader.header Sign up
+      br
+      input#regUsername.textbox(type="text" placeholder="Username")
+      br
+      br
+      input#regPassword.textbox(type="password" placeholder="Password")
+      br
+      br
+      button#signUpButton Sign Up
+
+    script(src="/scripts/login.js")

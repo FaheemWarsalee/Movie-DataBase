@@ -1,0 +1,106 @@
+{
+  "0": {
+    "id": 0,
+    "username": "MovieGeek",
+    "password": "1234",
+    "bio": "Welcome to my user page!!! Hope you enjoy your stay!!",
+    "pic": "https://us.123rf.com/450wm/mialima/mialima1603/mialima160300025/55096766-stock-vector-male-user-icon-isolated-on-a-white-background-account-avatar-for-web-user-profile-picture-unknown-ma.jpg?ver=6",
+    "contributing": true,
+    "followers": [],
+    "follows": [],
+    "notifications": [],
+    "reviews": [
+      0
+    ],
+    "suggested": [
+      0,
+      7,
+      9
+    ]
+  },
+  "1": {
+    "id": 1,
+    "username": "Hamza",
+    "password": "1234",
+    "bio": "Welcome to my user page!!! Hope you enjoy your stay!!",
+    "pic": "https://us.123rf.com/450wm/mialima/mialima1603/mialima160300025/55096766-stock-vector-male-user-icon-isolated-on-a-white-background-account-avatar-for-web-user-profile-picture-unknown-ma.jpg?ver=6",
+    "contributing": false,
+    "followers": [],
+    "follows": [],
+    "notifications": [],
+    "reviews": [],
+    "suggested": [
+      2,
+      8,
+      6
+    ]
+  },
+  "2": {
+    "id": 2,
+    "username": "Faheem",
+    "password": "1234",
+    "bio": "Welcome to my user page!!! Hope you enjoy your stay!!",
+    "pic": "https://us.123rf.com/450wm/mialima/mialima1603/mialima160300025/55096766-stock-vector-male-user-icon-isolated-on-a-white-background-account-avatar-for-web-user-profile-picture-unknown-ma.jpg?ver=6",
+    "contributing": false,
+    "followers": [],
+    "follows": [],
+    "notifications": [],
+    "reviews": [],
+    "suggested": [
+      2,
+      4,
+      1
+    ]
+  },
+  "3": {
+    "id": 3,
+    "username": "Peter",
+    "password": "1234",
+    "bio": "Welcome to my user page!!! Hope you enjoy your stay!!",
+    "pic": "https://us.123rf.com/450wm/mialima/mialima1603/mialima160300025/55096766-stock-vector-male-user-icon-isolated-on-a-white-background-account-avatar-for-web-user-profile-picture-unknown-ma.jpg?ver=6",
+    "contributing": false,
+    "followers": [],
+    "follows": [],
+    "notifications": [],
+    "reviews": [],
+    "suggested": [
+      5,
+      1,
+      9
+    ]
+  },
+  "4": {
+    "id": 4,
+    "username": "Safwan",
+    "password": "1234",
+    "bio": "Welcome to my user page!!! Hope you enjoy your stay!!",
+    "pic": "https://us.123rf.com/450wm/mialima/mialima1603/mialima160300025/55096766-stock-vector-male-user-icon-isolated-on-a-white-background-account-avatar-for-web-user-profile-picture-unknown-ma.jpg?ver=6",
+    "contributing": false,
+    "followers": [],
+    "follows": [],
+    "notifications": [],
+    "reviews": [],
+    "suggested": [
+      1,
+      8,
+      9
+    ]
+  },
+  "5": {
+    "id": 5,
+    "username": "Vadim",
+    "password": "1234",
+    "bio": "Welcome to my user page!!! Hope you enjoy your stay!!",
+    "pic": "https://us.123rf.com/450wm/mialima/mialima1603/mialima160300025/55096766-stock-vector-male-user-icon-isolated-on-a-white-background-account-avatar-for-web-user-profile-picture-unknown-ma.jpg?ver=6",
+    "contributing": false,
+    "followers": [],
+    "follows": [],
+    "notifications": [],
+    "reviews": [],
+    "suggested": [
+      10,
+      4,
+      0
+    ]
+  }
+}

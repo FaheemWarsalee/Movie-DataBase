@@ -1,0 +1,41 @@
+html
+  head
+    title Add Movie
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    .row
+      h1.MDBHeader Movie DataBase
+    .row
+      h1.header Add Movie to DataBase
+    #addMovie
+      h2.header Title
+      br
+      input#movieTitle.textbox(type="text" placeholder="Movie Title")
+      h2.header Genre (seperated by ',')
+      br
+      input#movieGenre.textbox(type="text" placeholder="Genres Here")
+      h2.header Directors (seperated by ',')
+      br
+      input#movieDirectors.textbox(type="text" placeholder="Directors")
+      h2.header Actors (seperated by ',')
+      br
+      input#movieActors.textbox(type="text" placeholder="Actors")
+      h2.header Writers (seperated by ',')
+      br
+      input#movieWriters.textbox(type="text" placeholder="Writers")
+      h2.header Plot
+      br
+      input#moviePlot.textbox(type="text" placeholder="Plot")
+      h2.header Released (day month year) (seperated by spaces)
+      br
+      input#movieReleased.textbox(type="text" placeholder="Released Date")
+      h2.header Runtime (minutes)
+      br
+      input#movieRuntime.textbox(type="text" placeholder="Movie Runtime")
+      br
+      br
+      button#submitButton Submit
+
+
+    script(src="/scripts/add_movie.js")

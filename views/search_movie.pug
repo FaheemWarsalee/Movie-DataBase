@@ -1,0 +1,50 @@
+html
+  head
+    title Search
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="/css/style.css")
+  body(onload="load()")
+    .row
+      .column
+        a(href = "/")
+          h1.MDBHeader Movie DataBase
+        a(href="/login")
+          button#login.loginSignup Login/Signup
+      #logoutSection
+          button#logout Logout
+    #navbar.row
+      a(href="/movies")
+        button Search Movies
+
+      a(href="/users")
+        button Search Users
+      
+      a(href="/people")
+        button Search People
+
+      a(href="/profile")
+        button My Profile
+    .row
+      div(id="searchbar page")
+        input#searchbox.textbox(type="text" placeholder="Search...")
+        select#searchType
+          option(value="Title" id="Title") Title
+          option(value="Genre" id="Genre") Genre
+          option(value="Year" id="Year") Year
+          option(value="Rating" id="Rating") Rating
+        button#go GO
+    if user.contributing
+      .row
+        h2.header Can't find a movie? Add it!
+        a(href="/addmovie")
+          br
+          button Add Movie
+    .row
+      h1#type.header Movie Search Results
+      #results
+        each m in movieList
+          .movieDiv
+            a(href="/movies/" + m.Title_Encoded) #{m.title}
+
+    script(src="scripts/search.js")
+    script(src="/scripts/logout.js")
